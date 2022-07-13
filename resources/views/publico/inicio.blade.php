@@ -37,7 +37,7 @@
     <span class="ti-arrow-up"></span>
   </div>
     
-  <div class="vg-page page-home" id="home" style="background-image: url({{asset('assets/img/bg_image_1.jpg')}})">
+  <div class="vg-page page-home" id="home" style="background-image: url({{asset('assets/img/bg_image.jpg')}})">
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
       <div class="container">
@@ -102,33 +102,34 @@
   <div class="vg-page page-portfolio" id="portfolio">
     <div class="container">
       <h1 class="text-center fw-normal wow fadeInUp">Ganadores</h1>
-      
-      <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>ITEM</th>
-                <th>C.I.</th>
-                <th>Nombre</th>
-                <th>Premio</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php $i=0;?>
-            @foreach($lista_ganador as $value)
-            <?php $i=$i+1;?>
-            <tr>
-                <td>{{$i}}</td>
-                <td>{{$value->item}}</td>
-                <td>{{$value->ci}}</td>
-                <td>{{$value->nombre}} {{$value->paterno}} {{$value->materno}}</td>
-                <td>{{$value->premio}}</td>
-                <td><img src="{{asset('storage/premio/'.$value->imagen)}}" width="100px" height="100px" ></td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+      <div class="table-responsive">
+        <table class="table table-striped align-middle">
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>ITEM</th>
+                  <th>C.I.</th>
+                  <th>Nombre</th>
+                  <th>Premio</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <?php $i=0;?>
+              @foreach($lista_ganador as $value)
+              <?php $i=$i+1;?>
+              <tr>
+                  <td>{{$i}}</td>
+                  <td>{{$value->item}}</td>
+                  <td>{{$value->ci}}</td>
+                  <td>{{$value->nombre}} {{$value->paterno}} {{$value->materno}}</td>
+                  <td>{{$value->premio}}</td>
+                  <td><img src="{{asset('storage/premio/'.$value->imagen)}}" width="100px" height="100px" ></td>
+              </tr>
+              @endforeach
+          </tbody>
+        </table>
+      </div>
     </div>
   </div> <!-- End Portfolio page -->
 

@@ -29,7 +29,10 @@
                             <td>{{$value->id}}</td>
                             <td>{{$value->premio}}</td>
                             <td>{{$value->detalle}}</td>
-                            <td><img src="{{asset('storage/premio/'.$value->imagen)}}" width="100px" height="100px" ></td>
+                            <td>
+                                <img src="{{asset('storage/premio/'.$value->imagen)}}" width="100px" height="100px" >
+                                <a href="{{route('editarPremio',$value->id)}}" class="fg-theme fw-medium">Editar Premio</a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

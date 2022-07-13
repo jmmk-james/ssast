@@ -79,8 +79,10 @@ class ControllerPremio extends Controller
         session_start();
     	if(isset($_SESSION['usuario']))
         {
+            
             $premio=App\Premio::findOrFail($request->id_premio);
             $premio->premio=ucwords($request->premio);
+            $premio->detalle=$request->detalle;
             $premio->save();
             $uri=array('id_search'=>0,'search'=>0);
             return redirect(route('listaPremio'));
