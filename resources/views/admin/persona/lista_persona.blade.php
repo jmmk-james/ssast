@@ -19,19 +19,15 @@
                         <tr>
                             <th>ID</th>
                             <th>Item</th>
-                            <th>Reparticion</th>
-                            <th>CI</th>
                             <th>Nombre</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($lista_persona as $value)
                         <tr>
-                            <td>{{$value->id_persona}}</td>
+                            <td>{{$value->id}}</td>
                             <td>{{$value->item}}</td>
-                            <td>{{$value->reparticion}}</td>
-                            <td>{{$value->ci}}</td>
-                            <td>{{$value->nombre}} {{$value->paterno}} {{$value->materno}}</td>
+                            <td>{{$value->nombre}}</td>
                         </tr>
                         @endforeach
                     </tbody>

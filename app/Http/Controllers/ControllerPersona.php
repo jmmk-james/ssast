@@ -17,7 +17,7 @@ class ControllerPersona extends Controller
             $usuario=$_SESSION['usuario'];
             $titulo="Panel SSAST";
             $titulo2="Lista de Personas";
-            $lista_persona=DB::table('view_datos_item')->get();
+            $lista_persona=App\Persona::all();
             
             $id_search="1";
             $tipo="Buscar Nombre de la Carrera";
@@ -67,11 +67,7 @@ class ControllerPersona extends Controller
         {
             $persona=new App\Persona;
             $persona->item=$request->item;
-            $persona->id_reparticion=$request->id_reparticion;
             $persona->nombre=ucwords($request->nombre);
-            $persona->paterno=ucwords($request->paterno);
-            $persona->materno=ucwords($request->materno);
-            $persona->ci=$request->ci;
             $persona->estado=0;
             $persona->save();
             $uri=array('id_search'=>0,'search'=>0);

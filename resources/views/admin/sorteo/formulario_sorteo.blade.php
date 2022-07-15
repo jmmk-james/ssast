@@ -21,21 +21,15 @@
                     <tr>
                         <th>#</th>
                         <th>Item</th>
-                        <th>CI</th>
                         <th>Nombre</th>
-                        <th>Paterno</th>
-                        <th>Materno</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($lista_persona as $value)
                     <tr class="table-size">
-                        <td>{{$value->id_persona}}</td>
+                        <td>{{$value->id}}</td>
                         <td>{{$value->item}}</td>
-                        <td>{{$value->ci}}</td>
                         <td>{{$value->nombre}}</td>
-                        <td>{{$value->paterno}}</td>
-                        <td>{{$value->materno}}</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -80,16 +74,7 @@
                         <div class="col-4"><b>ITEM</b></div><div id="ritem" class="col-8"></div>
                       </div>
                       <div class="row">
-                        <div class="col-4"><b>C.I.</b></div><div id="rci" class="col-8"></div>
-                      </div>
-                      <div class="row">
-                        <div class="col-4"><b>Nombre</b></div><div id="rnombre" class="col-8"></div>
-                      </div>
-                      <div class="row">
-                        <div class="col-4"><b>A. Paterno</b></div><div id="rpaterno" class="col-8"></div>
-                      </div>
-                      <div class="row">
-                        <div class="col-4"><b>A. Materno</b></div><div id="rmaterno" class="col-8"></div>
+                        <div class="col-4"><b>Nombre<br>Apellidos</b></div><div id="rnombre" class="col-8"></div>
                       </div>
                     </div>
                   </div>
@@ -123,7 +108,6 @@
                 <thead>
                     <tr>
                         <th>ITEM</th>
-                        <th>CI</th>
                         <th>Nombre</th>
                     </tr>
                 </thead>
@@ -131,7 +115,6 @@
                     @foreach($lista_ganador as $value)
                     <tr>
                         <td>{{$value->item}}</td>
-                        <td>{{$value->ci}}</td>
                         <td>{{$value->nombre}}</td>
                     </tr>
                     @endforeach

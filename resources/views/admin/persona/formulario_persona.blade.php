@@ -18,26 +18,8 @@
                     <input class="form-control" type="text" name="item" placeholder="ITEM" required="true">
                   </div>
                   <div class="col-12">
-                    <select name="id_reparticion" class="form-control" required="true">
-                        <option value="">Seleccionar Reparticion</option>
-                        @foreach($reparticion as $value)
-                        <option value="{{$value->id}}">{{$value->reparticion}}</option>
-                        @endforeach
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <input class="form-control" type="text" name="ci" placeholder="Cedula de Identidad" required="true">
-                  </div>
-                  <div class="col-12">
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre" required="true">
                   </div>
-                  <div class="col-12">
-                    <input class="form-control" type="text" name="paterno" placeholder="Apellido Paterno">
-                  </div>
-                  <div class="col-12">
-                    <input class="form-control" type="text" name="materno" placeholder="Apellido Materno">
-                  </div>
-                  
                   <div class="col-12">
                       <hr>
                   </div>

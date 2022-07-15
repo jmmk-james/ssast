@@ -17,8 +17,8 @@ class ControllerSorteo extends Controller
             $usuario=$_SESSION['usuario'];
             $titulo="Panel SSAST";
             $titulo2="Sorteo";
-            $lista_persona=DB::table('view_datos_item')->where('estado',0)->orderByRaw('RAND()')->get();
-            $lista_ganador=DB::table('view_datos_item')->where('estado',1)->get();
+            $lista_persona=App\Persona::where('estado',0)->orderByRaw('RAND()')->get();
+            $lista_ganador=App\Persona::where('estado',1)->get();
             $premio=App\Premio::all();
             
             $id_search="1";

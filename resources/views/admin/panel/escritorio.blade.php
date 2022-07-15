@@ -17,10 +17,6 @@
                 <li class="fg-dark"><b><a href="{{route('listaPersona')}}" class="fg-theme fw-medium">Listrar Item</a></li>
             </ul>
             <ul class="theme-list">
-                <li class="fg-dark"><b><a href="{{route('formularioReparticion')}}" class="fg-theme fw-medium">Registrar Reparticion</a></li>
-                <li class="fg-dark"><b><a href="{{route('listaReparticion')}}" class="fg-theme fw-medium">Listar Reparticion</a></li>
-            </ul>
-            <ul class="theme-list">
                 <li class="fg-dark"><b><a href="{{route('formularioPremio')}}" class="fg-theme fw-medium">Registrar Premios</a></li>
                 <li class="fg-dark"><b><a href="{{route('listaPremio')}}" class="fg-theme fw-medium">Listar Premios</a></li>
             </ul>

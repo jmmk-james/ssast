@@ -22,7 +22,6 @@
                         <tr>
                             <th>#</th>
                             <th>ITEM</th>
-                            <th>C.I.</th>
                             <th>Nombre</th>
                             <th>Premio</th>
                             <th></th>
@@ -35,8 +34,7 @@
                         <tr>
                             <td>{{$i}}</td>
                             <td>{{$value->item}}</td>
-                            <td>{{$value->ci}}</td>
-                            <td>{{$value->nombre}} {{$value->paterno}} {{$value->materno}}</td>
+                            <td>{{$value->nombre}}</td>
                             <td>{{$value->premio}}</td>
                             <td><img src="{{asset('storage/premio/'.$value->imagen)}}" width="100px" height="100px" ></td>
                         </tr>
